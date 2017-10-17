@@ -104,28 +104,28 @@
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#action" data-toggle="tab">
-                                            Action
+                                        <a href="#perikanan" data-toggle="tab">
+                                            Perikanan
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#adventure" data-toggle="tab">
-                                            Adventure
+                                        <a href="#kesehatan" data-toggle="tab">
+                                            Kesehatan
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#casino" data-toggle="tab">
-                                            Casual
+                                        <a href="#pertanian" data-toggle="tab">
+                                            Pertanian
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#puzzle" data-toggle="tab">
-                                            Puzzle
+                                        <a href="#Peternakan" data-toggle="tab">
+                                            Peternakan
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#sports" data-toggle="tab">
-                                            Sports
+                                        <a href="#otomotif" data-toggle="tab">
+                                            Otomotif
                                         </a>
                                     </li>
                                     </ul>
@@ -153,7 +153,7 @@
                                                 </tbody>
                                             </table>                                        
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="action">
+                                        <div role="tabpanel" class="tab-pane fade" id="perikanan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -164,7 +164,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($action as $master_datas)
+                                                    @foreach($perikanan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -175,7 +175,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="puzzle">
+                                        <div role="tabpanel" class="tab-pane fade" id="peternakan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -186,7 +186,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($puzzle as $master_datas)
+                                                    @foreach($peternakan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -197,7 +197,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="adventure">
+                                        <div role="tabpanel" class="tab-pane fade" id="pertanian">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -208,7 +208,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($adventure as $master_datas)
+                                                    @foreach($pertanian as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -219,7 +219,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="casino">
+                                        <div role="tabpanel" class="tab-pane fade" id="kesehatan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -230,7 +230,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($casino as $master_datas)
+                                                    @foreach($kesehatan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -241,7 +241,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="sports">
+                                        <div role="tabpanel" class="tab-pane fade" id="otomotif">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -252,7 +252,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($sports as $master_datas)
+                                                    @foreach($otomotif as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>

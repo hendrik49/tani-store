@@ -53,30 +53,30 @@ class HomeController extends Controller
 						                ->select(DB::raw('COUNT(users.id) as player'))
 						                ->WHERE('users.role',2)
 						                ->get();
-			$action = Products::orderBy('created_at','DESC')
+			$perikanan = Products::orderBy('created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Action')
+										->WHERE('t_products.category','Perikanan')
 										->get();
-			$arcade = Products::orderBy('created_at','DESC')
+			$pertanian = Products::orderBy('created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Arcade')
+										->WHERE('t_products.category','Pertanian')
 										->get();
 
-			$adventure = Products::orderBy('created_at','DESC')
+			$kesehatan = Products::orderBy('created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Adventure')
+										->WHERE('t_products.category','Kesehatan')
 										->get();
-			$casino = Products::orderBy('created_at','DESC')
+			$kecantikan = Products::orderBy('created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Casual')
+										->WHERE('t_products.category','Kecantikan')
 										->get();
-			$puzzle = Products::orderBy('created_at','DESC')
+			$peternakan = Products::orderBy('created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Puzzle')
+										->WHERE('t_products.category','Peternakan')
 										->get();
-			$sports = Products::orderBy('created_at','DESC')
+			$otomotif = Products::orderBy('created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Sports')
+										->WHERE('t_products.category','Otomotif')
 										->get();							
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
@@ -102,7 +102,7 @@ class HomeController extends Controller
 						                ->orderBy('t_products.count_play','DESC')
 						                ->paginate(10);
 												
-			return view('admin.home-admin', compact('master_datas','arcade','dashboard_count','player_count','action','adventure','casino','puzzle','sports'));	
+			return view('admin.home-admin', compact('master_datas','pertanian','dashboard_count','player_count','perikanan','kesehatan','kecantikan','peternakan','otomotif'));	
 			}
 		}
 		else{
@@ -233,23 +233,23 @@ class HomeController extends Controller
 		$rate->comment = Input::get('comment');
 		$rate->save();
 		
-		return redirect()->action(
+		return redirect()->perikanan(
 			'PublicController@play', ['id' => $id]
 		);
 	}
 		
 	
-	public function addproductadventure()
+	public function addproductkesehatan()
 		    {
 				
 		$user = Auth::user();
-		return view('admin.addproductadventure');
+		return view('admin.addproductkesehatan');
 	}
 	
-	public function addproductaction()
+	public function addproductperikanan()
 		    {
 		$user = Auth::user();
-		return view('admin.addproductaction');
+		return view('admin.addproductperikanan');
 	}
 	public function userprofile()
 	{
@@ -300,17 +300,17 @@ class HomeController extends Controller
 		
 		$user->save();
 		
-		return redirect()->action(
+		return redirect()->perikanan(
 			'HomeController@userprofile'
 		);
 	}
 	
 
 
-	public function addproductpuzzle()
+	public function addproductpeternakan()
 		    {
 		$user = Auth::user();
-		return view('admin.addproductpuzzle');
+		return view('admin.addproductpeternakan');
 	}
 	
 	public function addproductcasion()
@@ -319,10 +319,10 @@ class HomeController extends Controller
 		return view('admin.addproductcasion');
 	}
 	
-	public function addproductsports()
+	public function addproductotomotif()
 		    {
 		$user = Auth::user();
-		return view('admin.addproductsports');
+		return view('admin.addproductotomotif');
 	}
 	
 	public function addproduct()

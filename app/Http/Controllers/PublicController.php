@@ -65,10 +65,14 @@ class PublicController extends Controller
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 										->WHERE('t_products.category','Kecantikan')
 										->get();
+			$peternakan = Products::orderBy('t_products.created_at','DESC')
+			->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
+			->WHERE('t_products.category','Peternakan')
+			->get();
 			$kesehatan = Products::orderBy('t_products.created_at','DESC')
-										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Kesehatan')
-										->get();
+			->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
+			->WHERE('t_products.category','Kesehatan')
+			->get();
 			$pertanian = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 										->WHERE('t_products.category','Pertanian')
@@ -104,7 +108,7 @@ class PublicController extends Controller
 			if(!Auth::user()||Auth::user()->role==2){
 				return view('public.home', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.board-admin', compact('master_datas','dashboard_count','player_count','perikanan','kecantikan','kesehatan','pertanian','otomotif','nav'));	
+				return view('admin.board-admin', compact('master_datas','dashboard_count','player_count','perikanan','kecantikan','kesehatan','pertanian','peternakan','otomotif','nav'));	
 			}
 	}
 

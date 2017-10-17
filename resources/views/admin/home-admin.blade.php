@@ -12,8 +12,8 @@
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#kesehatan" data-toggle="tab">
-                                            Kesehatan
+                                        <a href="#perikanan" data-toggle="tab">
+                                            Perikanan
                                         </a>
                                     </li>
                                     <li role="presentation">
@@ -32,8 +32,8 @@
                                         </a>
                                     </li>
                                 <li role="presentation">
-                                        <a href="#perikanan" data-toggle="tab">
-                                            Perikanan
+                                        <a href="#kesehatan" data-toggle="tab">
+                                            Kesehatan
                                         </a>
                                     </li>
                                     <li role="presentation">
@@ -87,7 +87,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($action as $master_datas)
+                                                    @foreach($kesehatan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -118,7 +118,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($puzzle as $master_datas)
+                                                    @foreach($kecantikan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -149,7 +149,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($adventure as $master_datas)
+                                                    @foreach($pertanian as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -180,7 +180,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($casino as $master_datas)
+                                                    @foreach($peternakan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -211,7 +211,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($arcade as $master_datas)
+                                                    @foreach($perikanan as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
@@ -242,7 +242,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($sports as $master_datas)
+                                                    @foreach($otomotif as $master_datas)
                                                     <tr>
                                                         <td>{{ $master_datas->name }}</td>
                                                         <td>{{ $master_datas->category }}</td>
