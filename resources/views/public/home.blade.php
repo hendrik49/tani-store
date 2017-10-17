@@ -15,7 +15,7 @@
                                                     <div class="container no-pad">
                                                     <a href="{{ route('detail.id', ['id' => $new_product->id]) }}" >
                                                         <img src="{{ asset($new_product->img) }}" class="image">
-                                                    <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $new_product->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">{{ $new_product->coint }}</button></div>
+                                                    <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $new_product->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">Rp {{ number_format($new_product->coint,2) }}</button></div>
                                                     <div class="overlay1">
                                                         <div class="text">
                                                             <h3>{{ $new_product->name }}</h3>
@@ -41,7 +41,7 @@
                                                 <div class="thumbnail">
                                                     <div class="container no-pad">
                                                         <a href="{{ route('detail.id', ['id' => $most_played->id]) }}" ><img src="{{ asset($most_played->img) }}" class="image" width="900px" height="900px">
-                                                        <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $most_played->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">{{ $most_played->coint }}</button></div>
+                                                        <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $most_played->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">Rp {{ number_format($most_played->coint,2) }}</button></div>
                                                         <div class="overlay1">
                                                             <div class="text">
                                                                 <h3>{{ $most_played->name }}</h3>
@@ -67,7 +67,7 @@
                                                 <div class="thumbnail">
                                                     <div class="container no-pad">
                                                         <a href="{{ route('detail.id', ['id' => $most_rated->id]) }}" ><img src="{{ asset($most_rated->img) }}" class="image" width="900px" height="900px">
-                                                        <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $most_rated->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">{{ $most_rated->coint }}</button></div>
+                                                        <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $most_rated->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">Rp {{ number_format($most_rated->coint,2) }}</button></div>
                                                         <div class="overlay1">
                                                             <div class="text">
                                                                 <h3>{{ $most_rated->name }}</h3>

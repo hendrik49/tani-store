@@ -14,9 +14,9 @@
                                         </h4>
                                     </div>
                                     <div class="body">
-                                        <form  role="form" method="POST" Kecantikan="{{ url('/updatedataProduct') }}" enctype="multipart/form-data">
+                                        <form  role="form" method="POST" Kecantikan="{{ url('/updatedataproduct') }}" enctype="multipart/form-data">
                                             {{ csrf_field() }}
-                                            <input type="hidden" name="id" value="{{ $Product->id }}">
+                                            <input type="hidden" name="id" value="{{ $product->id }}">
                                             <div class="row clearfix">
                                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                                     <label for="name">Product Name</label>
@@ -24,7 +24,7 @@
                                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input id="name" type="text" class="form-control" name="name" value="{{ $Product->name }}" placeholder="Input Your Product Name">
+                                                            <input id="name" type="text" class="form-control" name="name" value="{{ $product->name }}" placeholder="Input Your Product Name">
                                                             @if ($errors->has('name'))
                                                                 <span class="help-block">
                                                                     <strong>{{ $errors->first('name') }}</strong>
@@ -41,7 +41,7 @@
                                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input id="desc" type="text" class="form-control" name="desc" value="{{ $Product->desc }}" placeholder="Input Your Product Description"></textarea>
+                                                            <input id="desc" type="text" class="form-control" name="desc" value="{{ $product->desc }}" placeholder="Input Your Product Description"></textarea>
                                                             @if ($errors->has('desc'))
                                                                 <span class="help-block">
                                                                     <strong>{{ $errors->first('desc') }}</strong>
@@ -59,7 +59,7 @@
                                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input id="url" type="text" class="form-control" name="url" value="{{ $Product->url }}" placeholder="Input Your Product URL"></textarea>
+                                                            <input id="url" type="text" class="form-control" name="url" value="{{ $product->url }}" placeholder="Input Your Product URL"></textarea>
                                                             @if ($errors->has('url'))
                                                                 <span class="help-block">
                                                                     <strong>{{ $errors->first('url') }}</strong>
@@ -79,11 +79,11 @@
                                                     <div class="form-group">
                                                             <select class="form-control show-tick" name="category">
                                                                 <option value="">-- Please select --</option>
-                                                                <option @if($Product->category=="Kesehatan") selected="selected" @endif value="Kesehatan">Kesehatan</option>
-                                                                <option @if($Product->category=="Kecantikan") selected="selected" @endif value="Kecantikan">Kecantikan</option>
-                                                                <option @if($Product->category=="Pertanian") selected="selected" @endif value="Pertanian">Pertanian</option>
-                                                                <option @if($Product->category=="Peternakan") selected="selected" @endif value="Peternakan">Peternakan</option>
-                                                                <option @if($Product->category=="Otomotif") selected="selected" @endif value="Otomotif">Otomotif</option>                                                                
+                                                                <option @if($product->category=="Kesehatan") selected="selected" @endif value="Kesehatan">Kesehatan</option>
+                                                                <option @if($product->category=="Kecantikan") selected="selected" @endif value="Kecantikan">Kecantikan</option>
+                                                                <option @if($product->category=="Pertanian") selected="selected" @endif value="Pertanian">Pertanian</option>
+                                                                <option @if($product->category=="Peternakan") selected="selected" @endif value="Peternakan">Peternakan</option>
+                                                                <option @if($product->category=="Otomotif") selected="selected" @endif value="Otomotif">Otomotif</option>                                                                
                                                             </select>
                                                             </div>      
                                                             @if ($errors->has('category'))
@@ -100,7 +100,7 @@
                                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input id="price" type="text" class="form-control" name="coint" value="{{ $Product->coint }}" placeholder="Input Your Product Point">
+                                                            <input id="price" type="number" class="form-control" name="coint" value="{{ $product->coint }}" placeholder="Input Your Product Point">
                                                                 @if ($errors->has('price'))
                                                                 <span class="help-block">
                                                                     <strong>{{ $errors->first('price') }}</strong>
@@ -126,7 +126,7 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <img src="{{ asset($Product->img)}}" height="150" width="150" class="img img-responsive"/>
+                                                    <img src="{{ asset($product->img)}}" height="150" width="150" class="img img-responsive"/>
                                                 </div>
                                             </div>
                                             <div class="row clearfix">
@@ -144,7 +144,7 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <img src="{{ asset($Product->banner)}}" height="150" width="450" class="img img-responsive"/>
+                                                    <img src="{{ asset($product->banner)}}" height="150" width="450" class="img img-responsive"/>
                                                 </div>
                                             </div>
 

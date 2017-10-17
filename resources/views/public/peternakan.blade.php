@@ -14,7 +14,7 @@
                                                 <div class="thumbnail">
                                                     <div class="container no-pad">
                                                         <a href="{{ route('detail.id', ['id' => $new_product->id]) }}" ><img src="{{ asset($new_product->img) }}" class="image" width="900px" height="900px">
-                                                        <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $new_product->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">{{ $new_product->coint }}</button></div>
+                                                        <div class="bottomright"><button type="button" class="btn bg-black waves-effect waves-light">{{ $new_product->category }}<br/><img src="{{ ('assets/images/icon-coin-sm.png') }}">{{ number_format($new_product->coint,2) }}</button></div>
                                                         <div class="overlay1">
                                                             <div class="text">
                                                                 <h3>{{ $new_product->name }}</h3>

@@ -122,9 +122,8 @@ class HomeController extends Controller
 									'category'=> 'required',
 									'desc'=> 'required',
 									'coint'=> 'required',
-									'url'=> 'required',
 				                    'img' => 'required|mimes:jpeg,bmp,jpg,png|max:2000|dimensions:width=512,height=512',
-				                    'banner' => 'required|mimes:jpeg,bmp,png,jpg,pngmax:2000|dimensions:min_width=1024,min_height=270'
+				                    'banner' => 'mimes:jpeg,bmp,png,jpg,pngmax:2000|dimensions:min_width=1024,min_height=270'
 				                ]);
 		
 		$max = DB::table('t_products')        

@@ -14,7 +14,7 @@
                                         </h4>
                                     </div>
                                     <div class="body">
-                                        <form  role="form" method="POST" action="{{ url('/adddataProduct') }}" enctype="multipart/form-data">
+                                        <form  role="form" method="POST" action="{{ url('/adddataproduct') }}" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="row clearfix">
                                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -100,7 +100,7 @@
                                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input id="coint" type="text" class="form-control" name="coint" placeholder="Input Your Product Point">
+                                                            <input id="coint" type="number" class="form-control" name="coint" placeholder="Input Your Product Point">
                                                                 @if ($errors->has('coint'))
                                                                 <span class="help-block">
                                                                     <strong>{{ $errors->first('coint') }}</strong>
