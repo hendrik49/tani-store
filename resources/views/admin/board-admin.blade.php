@@ -323,7 +323,7 @@ function getChartLine(x,y) {
             data: {
                 labels: x,
                 datasets: [{
-                    label: "Playing",
+                    label: "Checkout",
                     data: y,
                     borderColor: 'rgba(0, 188, 212, 0.75)',
                     backgroundColor: 'rgba(0, 188, 212, 0.3)',
