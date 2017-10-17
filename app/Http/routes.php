@@ -38,12 +38,13 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/addproductotomotif', 'HomeController@addproductotomotif');
 	Route::get('/addproduct', 'HomeController@addproduct');
 	Route::get('/editproduct/{id}', 'HomeController@editproduct');
-	Route::delete('/deleteproduct/{id}', 'HomeController@deleteproduct');
-	Route::post('/updatedataproduct', 'HomeController@updatedataproduct');
 	Route::get('/userprofile', 'HomeController@userprofile');
 	Route::get('/editprofile', 'HomeController@editprofile');
 	Route::post('/updateprofile', 'HomeController@updateprofile');
 	Route::post('/adddataproduct', 'HomeController@adddataproduct');
+	Route::delete('/deleteproduct/{id}', 'HomeController@deleteproduct');
+	Route::post('/updatedataproduct', 'HomeController@updatedataproduct');
+
 	Route::post('/addreviewproduct', 'HomeController@addreviewproduct');
 
 });

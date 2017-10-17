@@ -14,7 +14,7 @@
                                         </h4>
                                     </div>
                                     <div class="body">
-                                        <form  role="form" method="POST" Kecantikan="{{ url('/updatedataproduct') }}" enctype="multipart/form-data">
+                                        <form  role="form" method="POST" action="{{ url('/updatedataproduct') }}" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <input type="hidden" name="id" value="{{ $product->id }}">
                                             <div class="row clearfix">
