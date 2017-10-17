@@ -1,0 +1,104 @@
+/* Extra Small Devices */
+@media (max-width: 767px) {
+    /* Body */
+    .card .body {
+        padding: 10px;
+    }
+
+    /* Home Section */
+    section.content1 {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* Fixed position play on mobile */
+    .card-play {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .mobile-visible {
+        z-index: 1002;
+        display: none;
+    }
+    .mobile-visible .list-group {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* Navbar Brand */
+    .navbar-brand {
+        font-size: 13px;
+    }
+
+    /* Top Nav */
+    .topnav a {
+        padding: 10px;
+    }
+
+    /* Home Tabs */
+    .gs-home-tab {
+        font-size: 11px;
+    }
+    .gs-home-tab a {
+        padding: 10px !important;
+    }
+
+    /* Productstore list */
+    .gs-list-item {
+        font-size: 12px;
+        padding: 4px 8px;
+        margin: 0;
+    }
+
+    /* Media at Details */
+    .gs-media__img {
+        display: block;
+    }
+    .gs-media__img img {
+        margin: 0 auto;
+    }
+    .gs-media__desc {
+        padding-top: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* Profile section */
+    .profile-data,
+    .profile-buttons {
+        text-align: center;
+    }
+    .user-data .profile-buttons {
+        float: none;
+    }
+
+    /* Override default style */
+    .btn:not(.btn-link):not(.btn-circle) {
+        font-size: 11px;
+    }
+}
+
+/* Small Devices */
+@media (min-width: 768px) {
+    /* Hidden close icon outside mobile view */
+    .card-play__icon-show,
+    .card-play__icon-exit {
+        display: none;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 992px) {
+
+}
+
+/* Large Devices */
+@media (min-width: 1200px) {
+
+}
