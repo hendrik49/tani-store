@@ -44,18 +44,18 @@ CREATE TABLE `t_products` (
 --
 
 INSERT INTO `t_products` (`id`, `name`, `desc`, `category`, `img`, `img_slider`, `count_play`, `created_at`, `updated_at`, `coint`) VALUES
-(1, 'Ticc Tacc Toee', 'Ticc Tacc Toee', 'Puzzle', '/img_product/product_icon_1.png', '/img_product/firemanfooster.png', 10, '2017-06-17 14:16:41', '0000-00-00 00:00:00', 0),
-(2, 'Extremes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Racing', '/img_product/product_icon_2.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:37', '0000-00-00 00:00:00', 0),
-(3, 'Buzzy bird', 'Buzzy bird', 'Adventure', '/img_product/product_icon_3.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:39', '0000-00-00 00:00:00', 0),
-(4, 'Shooter Man rv', 'Shooter Man rv', 'Action', '/img_product/product_icon_4.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:40', '0000-00-00 00:00:00', 0),
-(5, 'UltimateBasketBall', 'UltimateBasketBall', 'Sports', '/img_product/product_icon_5.png', '/img_product/lumberjack.jpg', 10, '2017-06-17 14:16:41', '0000-00-00 00:00:00', 0),
-(6, 'zombie killer demo', 'zombie killer demo', 'Action', '/img_product/product_icon_6.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:42', '0000-00-00 00:00:00', 0),
-(7, 'GOKU GO SUPER', 'GOKU GO SUPER', 'Racing', '/img_product/product_icon_7.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:44', '0000-00-00 00:00:00', 0),
-(8, 'Kolpa oyun', 'Kolpa oyun', 'Adventure', '/img_product/product_icon_8.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:46', '0000-00-00 00:00:00', 0),
-(9, 'Memory Test420', 'Memory Test420', 'Puzzle', '/img_product/product_icon_9.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:16:41', '0000-00-00 00:00:00', 0),
-(10, 'JackPot for you', 'JackPot for you', 'Casino', '/img_product/product_icon_10.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:47', '0000-00-00 00:00:00', 0),
-(11, 'Basket Fun', 'Basket Fun', 'Sports', '/img_product/product_icon_11.png', '/img_product/superfat.jpg', 10, '2017-06-17 14:28:48', '0000-00-00 00:00:00', 0),
-(12, 'Mircle Money', 'Mircle Money', 'Casino', '/img_product/product_icon_12.png', '/img_product/superfat.jpg', 11, '2017-06-17 14:28:50', '2017-06-17 07:27:17', 0);
+(1, 'Ticc Tacc Toee', 'Ticc Tacc Toee', 'Puzzle', '/img_game/product_icon_1.png', '/img_game/firemanfooster.png', 10, '2017-06-17 14:16:41', '0000-00-00 00:00:00', 0),
+(2, 'Extremes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Racing', '/img_game/product_icon_2.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:37', '0000-00-00 00:00:00', 0),
+(3, 'Buzzy bird', 'Buzzy bird', 'Adventure', '/img_game/product_icon_3.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:39', '0000-00-00 00:00:00', 0),
+(4, 'Shooter Man rv', 'Shooter Man rv', 'Action', '/img_game/product_icon_4.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:40', '0000-00-00 00:00:00', 0),
+(5, 'UltimateBasketBall', 'UltimateBasketBall', 'Sports', '/img_game/product_icon_5.png', '/img_game/lumberjack.jpg', 10, '2017-06-17 14:16:41', '0000-00-00 00:00:00', 0),
+(6, 'zombie killer demo', 'zombie killer demo', 'Action', '/img_game/product_icon_6.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:42', '0000-00-00 00:00:00', 0),
+(7, 'GOKU GO SUPER', 'GOKU GO SUPER', 'Racing', '/img_game/product_icon_7.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:44', '0000-00-00 00:00:00', 0),
+(8, 'Kolpa oyun', 'Kolpa oyun', 'Adventure', '/img_game/product_icon_8.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:46', '0000-00-00 00:00:00', 0),
+(9, 'Memory Test420', 'Memory Test420', 'Puzzle', '/img_game/product_icon_9.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:16:41', '0000-00-00 00:00:00', 0),
+(10, 'JackPot for you', 'JackPot for you', 'Casino', '/img_game/product_icon_10.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:47', '0000-00-00 00:00:00', 0),
+(11, 'Basket Fun', 'Basket Fun', 'Sports', '/img_game/product_icon_11.png', '/img_game/superfat.jpg', 10, '2017-06-17 14:28:48', '0000-00-00 00:00:00', 0),
+(12, 'Mircle Money', 'Mircle Money', 'Casino', '/img_game/product_icon_12.png', '/img_game/superfat.jpg', 11, '2017-06-17 14:28:50', '2017-06-17 07:27:17', 0);
 
 -- --------------------------------------------------------
 

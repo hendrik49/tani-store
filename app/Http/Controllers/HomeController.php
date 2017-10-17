@@ -134,18 +134,18 @@ class HomeController extends Controller
 		}
 		$imageName = 'product_icon'.-$max. 
 				                $request->file('img')->getClientOriginalName();
-		$path = base_path() . '/public/img_product/';
+		$path = base_path() . '/public/img_game/';
 		$request->file('img')->move($path , $imageName);
 
 		$imagebannerName = 'product_icon'.-$max. 
 				                $request->file('banner')->getClientOriginalName();
-		$path = base_path() . '/public/img_product/';
+		$path = base_path() . '/public/img_game/';
 		$request->file('banner')->move($path , $imagebannerName);
 
 		$masterdata = new MasterData;
 
-		$masterdata->img = '/img_product/'.$imageName;
-		$masterdata->banner = '/img_product/'.$imagebannerName;
+		$masterdata->img = '/img_game/'.$imageName;
+		$masterdata->banner = '/img_game/'.$imagebannerName;
 		$masterdata->name = Input::get('name');
 		$masterdata->coint = Input::get('coint');
 		$masterdata->url = Input::get('url');
@@ -182,16 +182,16 @@ class HomeController extends Controller
 		if($request->file('img')){
 			$imageName = 'product_icon'.-$max. 
 								$request->file('img')->getClientOriginalName();
-			$path = base_path() . '/public/img_product/';
+			$path = base_path() . '/public/img_game/';
 			$request->file('img')->move($path , $imageName);
-			$masterdata->img = '/img_product/'.$imageName;			
+			$masterdata->img = '/img_game/'.$imageName;			
 		}
 		if($request->file('banner')){
 			$imagebannerName = 'product_icon'.-$max. 
 								$request->file('banner')->getClientOriginalName();
-			$path = base_path() . '/public/img_product/';
+			$path = base_path() . '/public/img_game/';
 			$request->file('banner')->move($path , $imagebannerName);
-			$masterdata->banner = '/img_product/'.$imagebannerName;			
+			$masterdata->banner = '/img_game/'.$imagebannerName;			
 		}
 
 		$masterdata->name = Input::get('name');

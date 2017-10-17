@@ -40,18 +40,18 @@ CREATE TABLE IF NOT EXISTS `t_products` (
 --
 
 INSERT INTO `t_products` (`id`, `name`, `desc`, `category`, `img`) VALUES
-(1, 'Ticc Tacc Toee', 'Ticc Tacc Toee', 'Puzzle', '/img_product/product_icon_1.png'),
-(2, 'Extremes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Racing', '/img_product/product_icon_2.png'),
-(3, 'Buzzy bird', 'Buzzy bird', 'Flappy Bird', '/img_product/product_icon_3.png'),
-(4, 'Shooter Man rv', 'Shooter Man rv', 'Action', '/img_product/product_icon_4.png'),
-(5, 'UltimateBasketBall', 'UltimateBasketBall', 'Sports', '/img_product/product_icon_5.png'),
-(6, 'zombie killer demo', 'zombie killer demo', 'Action', '/img_product/product_icon_6.png'),
-(7, 'GOKU GO SUPER', 'GOKU GO SUPER', 'Racing', '/img_product/product_icon_7.png'),
-(8, 'Kolpa oyun', 'Kolpa oyun', 'Flappy Bird', '/img_product/product_icon_8.png'),
-(9, 'Memory Test420', 'Memory Test420', 'Puzzle', '/img_product/product_icon_9.png'),
-(10, 'JackPot for you', 'JackPot for you', 'Casino', '/img_product/product_icon_10.png'),
-(11, 'Basket Fun', 'Basket Fun', 'Sports', '/img_product/product_icon_11.png'),
-(12, 'Mircle Money', 'Mircle Money', 'Casino', '/img_product/product_icon_12.png');
+(1, 'Ticc Tacc Toee', 'Ticc Tacc Toee', 'Puzzle', '/img_game/product_icon_1.png'),
+(2, 'Extremes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Racing', '/img_game/product_icon_2.png'),
+(3, 'Buzzy bird', 'Buzzy bird', 'Flappy Bird', '/img_game/product_icon_3.png'),
+(4, 'Shooter Man rv', 'Shooter Man rv', 'Action', '/img_game/product_icon_4.png'),
+(5, 'UltimateBasketBall', 'UltimateBasketBall', 'Sports', '/img_game/product_icon_5.png'),
+(6, 'zombie killer demo', 'zombie killer demo', 'Action', '/img_game/product_icon_6.png'),
+(7, 'GOKU GO SUPER', 'GOKU GO SUPER', 'Racing', '/img_game/product_icon_7.png'),
+(8, 'Kolpa oyun', 'Kolpa oyun', 'Flappy Bird', '/img_game/product_icon_8.png'),
+(9, 'Memory Test420', 'Memory Test420', 'Puzzle', '/img_game/product_icon_9.png'),
+(10, 'JackPot for you', 'JackPot for you', 'Casino', '/img_game/product_icon_10.png'),
+(11, 'Basket Fun', 'Basket Fun', 'Sports', '/img_game/product_icon_11.png'),
+(12, 'Mircle Money', 'Mircle Money', 'Casino', '/img_game/product_icon_12.png');
 
 -- --------------------------------------------------------
 

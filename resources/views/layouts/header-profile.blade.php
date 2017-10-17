@@ -124,7 +124,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="{{ url('/') }}"><p><img src="{{ asset('img_product/logo.png') }}" width="30" height="30" alt="User Image">Herbal Store</p></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><p><img src="{{ asset('img_game/logo.png') }}" width="30" height="30" alt="User Image">Herbal Store</p></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">

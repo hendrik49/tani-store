@@ -183,14 +183,14 @@ class PublicController extends Controller
 				$master_datum = DB::table('t_products')
 						->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						->join('t_rate', 't_rate.id_product', '=', 't_products.id','left outer')
-						->select(DB::raw('t_products.id,t_products.name,t_products.name,t_products.desc,t_products.url,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate, t_rate.user_name,t_rate.rate,t_rate.comment,t_rate.t_products.created_at'))
+						->select(DB::raw('t_products.id,t_products.name,t_products.name,t_products.desc,t_products.url,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate, t_rate.user_name,t_rate.rate,t_rate.comment,t_rate.created_at'))
 						->where('t_products.id',$id)
 						->first();
 
 				$master_datas = DB::table('t_products')
 						->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						->join('t_rate', 't_rate.id_product', '=', 't_products.id','left outer')
-						->select(DB::raw('t_products.id,t_products.name,t_products.name,t_products.desc,t_products.url,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate, t_rate.user_name,t_rate.rate,t_rate.comment,t_rate.t_products.created_at'))
+						->select(DB::raw('t_products.id,t_products.name,t_products.name,t_products.desc,t_products.url,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate, t_rate.user_name,t_rate.rate,t_rate.comment,t_rate.created_at'))
 						->where('t_products.id',$id)
 						->paginate(3);
 
@@ -472,9 +472,10 @@ class PublicController extends Controller
 		$master_datas = DB::table('t_products')
 				                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 				                ->join('t_rate', 't_rate.id_product', '=', 't_products.id','left outer')
-				                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate, t_rate.user_name,t_rate.rate,t_rate.comment,t_rate.t_products.created_at'))
+				                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate, t_rate.user_name,t_rate.rate,t_rate.comment,t_rate.created_at'))
 				                ->where('t_products.id',$id)
-				                ->get();
+								->get();
+								
 		$slider = DB::table('t_products')
 						        ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.banner,t_products.img,t_products.img_slider'))
 						        ->orderBy('t_products.count_play','DESC')
