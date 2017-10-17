@@ -57,25 +57,25 @@ class PublicController extends Controller
 						                ->select(DB::raw('COUNT(users.id) as player'))
 						                ->WHERE('users.role',2)
 						                ->get();
-			$action = Products::orderBy('t_products.created_at','DESC')
+			$perikanan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Action')
+										->WHERE('t_products.category','Perikanan')
 										->get();
-			$adventure = Products::orderBy('t_products.created_at','DESC')
+			$kecantikan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Adventure')
+										->WHERE('t_products.category','Kecantikan')
 										->get();
-			$casino = Products::orderBy('t_products.created_at','DESC')
+			$kesehatan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Casual')
+										->WHERE('t_products.category','Kesehatan')
 										->get();
-			$puzzle = Products::orderBy('t_products.created_at','DESC')
+			$pertanian = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Puzzle')
+										->WHERE('t_products.category','Pertanian')
 										->get();
-			$sports = Products::orderBy('t_products.created_at','DESC')
+			$otomotif = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Sports')
+										->WHERE('t_products.category','Otomotif')
 										->get();							
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
@@ -104,7 +104,7 @@ class PublicController extends Controller
 			if(!Auth::user()||Auth::user()->role==2){
 				return view('public.home', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.board-admin', compact('master_datas','dashboard_count','player_count','action','adventure','casino','puzzle','sports','nav'));	
+				return view('admin.board-admin', compact('master_datas','dashboard_count','player_count','perikanan','kecantikan','kesehatan','pertanian','otomotif','nav'));	
 			}
 	}
 
@@ -118,29 +118,29 @@ class PublicController extends Controller
 						                ->select(DB::raw('COUNT(users.id) as player'))
 						                ->WHERE('users.role',2)
 						                ->get();
-			$action = Products::orderBy('t_products.created_at','DESC')
+			$perikanan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Action')
+										->WHERE('t_products.category','Perikanan')
 										->get();
-			$adventure = Products::orderBy('t_products.created_at','DESC')
+			$kecantikan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Adventure')
+										->WHERE('t_products.category','Kecantikan')
 										->get();
-			$casino = Products::orderBy('t_products.created_at','DESC')
+			$kesehatan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Casual')
+										->WHERE('t_products.category','Kesehatan')
 										->get();
-			$arcade = Products::orderBy('t_products.created_at','DESC')
+			$peternakan = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Arcade')
+										->WHERE('t_products.category','Peternakan')
 										->get();
-			$puzzle = Products::orderBy('t_products.created_at','DESC')
+			$pertanian = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Puzzle')
+										->WHERE('t_products.category','Pertanian')
 										->get();
-			$sports = Products::orderBy('t_products.created_at','DESC')
+			$otomotif = Products::orderBy('t_products.created_at','DESC')
 										->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
-										->WHERE('t_products.category','Sports')
+										->WHERE('t_products.category','Otomotif')
 										->get();							
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
@@ -168,7 +168,7 @@ class PublicController extends Controller
 			if(!Auth::user()||Auth::user()->role==2){
 				return view('public.home', compact('new_product','most_played','most_rated','slider','top_products'));
 			}else{
-				return view('admin.home-admin', compact('master_datas','dashboard_count','arcade','player_count','action','adventure','casino','puzzle','sports'));	
+				return view('admin.home-admin', compact('master_datas','dashboard_count','peternakan','player_count','perikanan','kecantikan','kesehatan','pertanian','otomotif'));	
 			}
 	}
 	
@@ -230,26 +230,26 @@ class PublicController extends Controller
 			}
 	}
 
-	public function adventure()
+	public function kecantikan()
 		    {
-			$nav='adventure';
-			$master_datas = Products::Where('category','Adventure')->orderBy('t_products.created_at','DESC')->get();
+			$nav='kecantikan';
+			$master_datas = Products::Where('category','Kecantikan')->orderBy('t_products.created_at','DESC')->get();
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Adventure')
+						                ->where('t_products.category','Kecantikan')
 						                ->orderBy('t_products.id','DESC')
 						                ->get();
 			$most_played = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Adventure')
+						                ->where('t_products.category','Kecantikan')
 						                ->orderBy('t_products.count_play','DESC')
 						                ->get();
 			$most_rated = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Adventure')
+						                ->where('t_products.category','Kecantikan')
 						                ->orderBy('t_products_rate.user_rate','DESC')
 						                ->get();
 			$slider = DB::table('t_products')
@@ -261,34 +261,34 @@ class PublicController extends Controller
 						                ->orderBy('t_products.count_play','DESC')
 						                ->paginate(10);
 			if(!Auth::user()||Auth::user()->role==2){
-				return view('public.adventure', compact('new_product','most_played','most_rated','slider','top_products','nav'));
+				return view('public.kecantikan', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.adventure-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
+				return view('admin.kecantikan-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
 			}
 	}
 	
 
-	public function action()
+	public function perikanan()
 		    {
-			$nav='action';
-			$master_datas = Products::Where('category','Action')->orderBy('t_products.created_at','DESC')->get();
+			$nav='perikanan';
+			$master_datas = Products::Where('category','Perikanan')->orderBy('t_products.created_at','DESC')->get();
 
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Action')
+						                ->where('t_products.category','Perikanan')
 						                ->orderBy('t_products.id','DESC')
 						                ->get();
 			$most_played = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Action')
+						                ->where('t_products.category','Perikanan')
 						                ->orderBy('t_products.count_play','DESC')
 						                ->get();
 			$most_rated = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Action')
+						                ->where('t_products.category','Perikanan')
 						                ->orderBy('t_products_rate.user_rate','DESC')
 						                ->get();
 			$slider = DB::table('t_products')
@@ -300,35 +300,35 @@ class PublicController extends Controller
 						                ->orderBy('t_products.count_play','DESC')
 						                ->paginate(10);
 			if(!Auth::user()||Auth::user()->role==2){
-				return view('public.action', compact('new_product','most_played','most_rated','slider','top_products','nav'));
+				return view('public.perikanan', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.action-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
+				return view('admin.perikanan-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
 			}
 	}
 	
 	
 	
-	public function casino()
+	public function kesehatan()
 		    {
-			$nav='casino';
-			$master_datas = Products::Where('category','Casual')->orderBy('t_products.created_at','DESC')->get();
+			$nav='kesehatan';
+			$master_datas = Products::Where('category','Kesehatan')->orderBy('t_products.created_at','DESC')->get();
 
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Casual')
+						                ->where('t_products.category','Kesehatan')
 						                ->orderBy('t_products.id','DESC')
 						                ->get();
 			$most_played = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Casual')
+						                ->where('t_products.category','Kesehatan')
 						                ->orderBy('t_products.count_play','DESC')
 						                ->get();
 			$most_rated = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Casual')
+						                ->where('t_products.category','Kesehatan')
 						                ->orderBy('t_products_rate.user_rate','DESC')
 						                ->get();
 			$slider = DB::table('t_products')
@@ -340,33 +340,33 @@ class PublicController extends Controller
 						                ->orderBy('t_products.count_play','DESC')
 						                ->paginate(10);
 			if(!Auth::user()||Auth::user()->role==2){
-				return view('public.casino', compact('new_product','most_played','most_rated','slider','top_products','nav'));
+				return view('public.kesehatan', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.action-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
+				return view('admin.perikanan-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
 			}
 	}
 	
-	public function sports()
+	public function otomotif()
 		    {
 			$nav='sport';
-			$master_datas = Products::Where('category','Sports')->orderBy('t_products.created_at','DESC')->get();
+			$master_datas = Products::Where('category','Otomotif')->orderBy('t_products.created_at','DESC')->get();
 	
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Sports')
+						                ->where('t_products.category','Otomotif')
 						                ->orderBy('t_products.id','DESC')
 						                ->get();
 			$most_played = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Sports')
+						                ->where('t_products.category','Otomotif')
 						                ->orderBy('t_products.count_play','DESC')
 						                ->get();
 			$most_rated = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Sports')
+						                ->where('t_products.category','Otomotif')
 						                ->orderBy('t_products_rate.user_rate','DESC')
 						                ->get();
 			$slider = DB::table('t_products')
@@ -378,33 +378,33 @@ class PublicController extends Controller
 						                ->orderBy('t_products.count_play','DESC')
 						                ->paginate(10);
 			if(!Auth::user()||Auth::user()->role==2){
-				return view('public.sports', compact('new_product','most_played','most_rated','slider','top_products','nav'));
+				return view('public.otomotif', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.sports-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
+				return view('admin.otomotif-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
 			}
 	}
 	
-	public function arcade()
+	public function peternakan()
 	{
-	$nav='arcade';
-	$master_datas = Products::Where('category','Arcade')->orderBy('t_products.created_at','DESC')->get();
+	$nav='peternakan';
+	$master_datas = Products::Where('category','Peternakan')->orderBy('t_products.created_at','DESC')->get();
 
 	$new_product = DB::table('t_products')
 								->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 								->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-								->where('t_products.category','Arcade')
+								->where('t_products.category','Peternakan')
 								->orderBy('t_products.id','DESC')
 								->get();
 	$most_played = DB::table('t_products')
 								->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 								->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-								->where('t_products.category','Arcade')
+								->where('t_products.category','Peternakan')
 								->orderBy('t_products.count_play','DESC')
 								->get();
 	$most_rated = DB::table('t_products')
 								->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 								->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-								->where('t_products.category','Arcade')
+								->where('t_products.category','Peternakan')
 								->orderBy('t_products_rate.user_rate','DESC')
 								->get();
 	$slider = DB::table('t_products')
@@ -416,34 +416,34 @@ class PublicController extends Controller
 								->orderBy('t_products.count_play','DESC')
 								->paginate(10);
 	if(!Auth::user()||Auth::user()->role==2){
-		return view('public.arcade', compact('new_product','most_played','most_rated','slider','top_products','nav'));
+		return view('public.peternakan', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 	}else{
-		return view('admin.arcade-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
+		return view('admin.peternakan-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
 	}
 }
 
 
-	public function puzzle()
+	public function pertanian()
 		    {
-			$nav='puzzle';
-			$master_datas = Products::Where('category','Puzzle')->orderBy('t_products.created_at','DESC')->get();
+			$nav='pertanian';
+			$master_datas = Products::Where('category','Pertanian')->orderBy('t_products.created_at','DESC')->get();
 
 			$new_product = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Puzzle')
+						                ->where('t_products.category','Pertanian')
 						                ->orderBy('t_products.id','DESC')
 						                ->get();
 			$most_played = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Puzzle')
+						                ->where('t_products.category','Pertanian')
 						                ->orderBy('t_products.count_play','DESC')
 						                ->get();
 			$most_rated = DB::table('t_products')
 						                ->join('t_products_rate', 't_products_rate.id_product', '=', 't_products.id','left outer')
 						                ->select(DB::raw('t_products.id,t_products.name,t_products.desc,t_products.coint,t_products.category,t_products.img,t_products_rate.avg_rate,t_products_rate.user_rate'))
-						                ->where('t_products.category','Puzzle')
+						                ->where('t_products.category','Pertanian')
 						                ->orderBy('t_products_rate.user_rate','DESC')
 						                ->get();
 			$slider = DB::table('t_products')
@@ -455,9 +455,9 @@ class PublicController extends Controller
 						                ->orderBy('t_products.count_play','DESC')
 						                ->paginate(10);
 			if(!Auth::user()||Auth::user()->role==2){
-				return view('public.puzzle', compact('new_product','most_played','most_rated','slider','top_products','nav'));
+				return view('public.pertanian', compact('new_product','most_played','most_rated','slider','top_products','nav'));
 			}else{
-				return view('admin.puzzle-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
+				return view('admin.pertanian-admin', compact('master_datas','new_product','most_played','most_rated','slider','top_products','nav'));	
 			}
 	}
 	

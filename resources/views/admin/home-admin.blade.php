@@ -12,33 +12,33 @@
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#action" data-toggle="tab">
-                                            Action
+                                        <a href="#kesehatan" data-toggle="tab">
+                                            Kesehatan
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#adventure" data-toggle="tab">
-                                            Adventure
+                                        <a href="#kecantikan" data-toggle="tab">
+                                            Kecantikan
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                    <a href="#arcade" data-toggle="tab">
-                                        Arcade
+                                    <a href="#pertanian" data-toggle="tab">
+                                            Pertanian
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                        <a href="#casino" data-toggle="tab">
-                                            Casual
+                                        <a href="#peternakan" data-toggle="tab">
+                                            Peternakan
                                         </a>
                                     </li>
                                 <li role="presentation">
-                                        <a href="#puzzle" data-toggle="tab">
-                                            Puzzle
+                                        <a href="#perikanan" data-toggle="tab">
+                                            Perikanan
                                         </a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#sports" data-toggle="tab">
-                                            Sports
+                                        <a href="#otomotif" data-toggle="tab">
+                                            Otomotif
                                         </a>
                                     </li>
                                     </ul>
@@ -75,7 +75,7 @@
                                                 </tbody>
                                             </table>                                        
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="action">
+                                        <div role="tabpanel" class="tab-pane fade" id="kesehatan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -106,7 +106,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="puzzle">
+                                        <div role="tabpanel" class="tab-pane fade" id="kecantikan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -137,7 +137,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="adventure">
+                                        <div role="tabpanel" class="tab-pane fade" id="pertanian">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -168,7 +168,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="casino">
+                                        <div role="tabpanel" class="tab-pane fade" id="peternakan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -199,7 +199,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="arcade">
+                                        <div role="tabpanel" class="tab-pane fade" id="perikanan">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>
@@ -230,7 +230,7 @@
                                                 </tbody>
                                             </table>  
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="sports">
+                                        <div role="tabpanel" class="tab-pane fade" id="otomotif">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
                                                     <tr>

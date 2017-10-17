@@ -196,27 +196,27 @@
                     <i class="material-icons">select_all</i>
                     <span class="hidden-xs">All</span>
                 </a>
-                <a data-toggle="tooltip" title="Action" href="{{ url('/action') }}" class="@if($nav=='action') active @endif">
+                <a data-toggle="tooltip" title="Action" href="{{ url('/kesehatan') }}" class="@if($nav=='kesehatan') active @endif">
                     <i class="material-icons">theaters</i>
                     <span class="hidden-xs">Kesehatan</span>
                 </a>
-                <a data-toggle="tooltip" title="Casual" href="{{ url('/casino') }}" class="@if($nav=='casino') active @endif">
+                <a data-toggle="tooltip" title="Casual" href="{{ url('/kecantikan') }}" class="@if($nav=='kecantikan') active @endif">
                     <i class="material-icons">group_work</i>
                     <span class="hidden-xs">Kecantikan</span>
                 </a>
-                <a data-toggle="tooltip" title="Arcade" href="{{ url('/arcade') }}" class="@if($nav=='arcade') active @endif">
+                <a data-toggle="tooltip" title="Arcade" href="{{ url('/pertanian') }}" class="@if($nav=='pertanian') active @endif">
                     <i class="material-icons">assistant</i>
                     <span class="hidden-xs">Pertanian</span>
                 </a>
-                <a data-toggle="tooltip" title="Adventure" href="{{ url('/adventure') }}" class="@if($nav=='adventure') active @endif">
+                <a data-toggle="tooltip" title="Adventure" href="{{ url('/peternakan') }}" class="@if($nav=='peternakan') active @endif">
                     <i class="material-icons">explore</i>
                     <span class="hidden-xs">Peternakan</span>
                 </a>
-                <a data-toggle="tooltip" title="Puzzle" href="{{ url('/puzzle') }}" class="@if($nav=='puzzle') active @endif">
+                <a data-toggle="tooltip" title="Puzzle" href="{{ url('/perikanan') }}" class="@if($nav=='perikanan') active @endif">
                     <i class="material-icons">videogame_asset</i>
                     <span class="hidden-xs">Perikanan</span>
                 </a>
-                <a data-toggle="tooltip" title="Sport" href="{{ url('/sports') }}" class="@if($nav=='sport') active @endif">
+                <a data-toggle="tooltip" title="Sport" href="{{ url('/otomotif') }}" class="@if($nav=='otomotif') active @endif">
                     <i class="material-icons">rowing</i>
                     <span class="hidden-xs">Otomotif</span>
                 </a>

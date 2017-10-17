@@ -17,12 +17,14 @@ Route::get('/', 'PublicController@index');
 Route::get('/detail/{id?}', ['as'=>'detail.id','uses'=>'PublicController@detail']);
 Route::get('/action', 'PublicController@action');
 Route::get('/listproducts', 'PublicController@listproducts');
-Route::get('/casino', 'PublicController@casino');
-Route::get('/adventure', 'PublicController@adventure');
+
+Route::get('/perikanan', 'PublicController@perikanan');
+Route::get('/kesehatan', 'PublicController@kesehatan');
+Route::get('/kecantikan', 'PublicController@kecantikan');
 Route::get('/home', 'PublicController@index');
-Route::get('/puzzle', 'PublicController@puzzle');
-Route::get('/arcade', 'PublicController@arcade');
-Route::get('/sports', 'PublicController@sports');
+Route::get('/pertanian', 'PublicController@pertanian');
+Route::get('/peternakan', 'PublicController@peternakan');
+Route::get('/otomotif', 'PublicController@otomotif');
 Route::get('/play/{id}', 'PublicController@play');
 Route::get('/dashboard', 'DashboardController@dashboard');
 Route::get('/getDataBarChart', 'PublicController@getDataBarChart');
@@ -31,9 +33,9 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/addproductaction', 'HomeController@addproductaction');
 	Route::get('/addproductcasino', 'HomeController@addproductcasino');
-	Route::get('/addproductadventure', 'HomeController@addproductadventure');
-	Route::get('/addproductpuzzle', 'HomeController@addproductpuzzle');
-	Route::get('/addproductsports', 'HomeController@addproductsports');
+	Route::get('/addproductkecantikan', 'HomeController@addproductkecantikan');
+	Route::get('/addproductpertanian', 'HomeController@addproductpertanian');
+	Route::get('/addproductotomotif', 'HomeController@addproductotomotif');
 	Route::get('/addproduct', 'HomeController@addproduct');
 	Route::get('/editproduct/{id}', 'HomeController@editproduct');
 	Route::delete('/deleteproduct/{id}', 'HomeController@deleteproduct');
