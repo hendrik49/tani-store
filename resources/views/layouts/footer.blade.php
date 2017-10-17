@@ -13,6 +13,8 @@
     <!-- Waves Effect Plugin Js -->
     <script type="text/javascript" src="{{ URL::to('assets/plugins/node-waves/waves.js') }}"></script>
 
+    <script type="text/javascript" src="{{ URL::to('assets/plugins/ckeditor/ckeditor.js')}}"></script>
+
     <!-- Select Plugin Js -->
     <script type="text/javascript" src="{{ URL::to('assets/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
 
@@ -49,7 +51,8 @@
                     console.log('Rating: ' + e.detail);
                 });
             }
-            
+            CKEDITOR.replace('desc');
+
         </script>
 </body>
 
