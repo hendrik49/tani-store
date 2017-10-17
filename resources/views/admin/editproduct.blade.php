@@ -41,7 +41,9 @@
                                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input id="desc" type="text" class="form-control" name="desc" value="{{ $product->desc }}" placeholder="Input Your Product Description"></textarea>
+                                                            <textarea id="desc" type="text" class="form-control" name="desc">
+                                                                {!! $product->desc !!}
+                                                            </textarea>
                                                             @if ($errors->has('desc'))
                                                                 <span class="help-block">
                                                                     <strong>{{ $errors->first('desc') }}</strong>
